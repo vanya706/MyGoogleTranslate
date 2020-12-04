@@ -17,7 +17,7 @@ public class FilterAllInput extends HttpFilter {
 
         HttpSession session = request.getSession();
 
-        if("/form".equals(request.getRequestURI())) {
+        if("/form".equals(request.getRequestURI()) || "/translate".equals(request.getRequestURI())) {
             super.doFilter(request, response, chain);
             return;
         }
